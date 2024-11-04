@@ -34,4 +34,19 @@ document.getElementById('transaction-form').addEventListener('submit', function 
     document.getElementById('transaction-form').reset();
 });
 
+function displayTransactions() {
+    const list = document.getElementById('transaction-list');
+    list.innerHTML = ''; 
+
+    transactions.forEach(transaction => {
+        const li = document.createElement('li');
+        li.classList.add(transaction.type); 
+        li.innerHTML = `
+            <span>${transaction.description} - $${transaction.amount.toFixed(2)} (${transaction.type})</span>
+            <button onclick="deleteTransaction(${transaction.id})">Delete</button>
+        `;
+        list.appendChild(li);
+    });
+}
+
 
