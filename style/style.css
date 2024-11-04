@@ -1,0 +1,24 @@
+
+.container {
+    width: 80%;
+    margin: auto;
+    font-family: Arial, sans-serif;
+  }
+  
+  form, .filters, ul {
+    margin-top: 20px;
+  }
+  
+  #transaction-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .transaction.income {
+    color: green;
+  }
+  
+  .transaction.expense {
+    color: red;
+  }
+  
